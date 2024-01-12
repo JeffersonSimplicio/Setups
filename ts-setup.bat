@@ -274,3 +274,6 @@ echo     "moduleResolution": "node16"
 echo   }
 echo }
 ) > %currentDirectory%\tsconfig.json
+
+REM Instala as bibliotecas
+npm i
