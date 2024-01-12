@@ -250,3 +250,27 @@ echo     }
 echo   }
 echo }
 ) > %currentDirectory%\package-lock.json
+
+REM Cria o tsconfig.json
+(
+echo {
+echo   "$schema": "https://json.schemastore.org/tsconfig",
+echo   "display": "Node 20",
+echo   "_version": "20.1.0",
+echo.
+echo   "compilerOptions": {
+echo     "lib": ["es2023"],
+echo     "module": "node16",
+echo     "target": "es2022",
+echo.
+echo     "rootDir": "./",
+echo     "outDir": "./dist",
+echo.
+echo     "strict": true,
+echo     "esModuleInterop": true,
+echo     "skipLibCheck": true,
+echo     "forceConsistentCasingInFileNames": true,
+echo     "moduleResolution": "node16"
+echo   }
+echo }
+) > %currentDirectory%\tsconfig.json
