@@ -10,3 +10,20 @@ Este script foi desenvolvido para automatizar a configuração inicial de um pro
 ## Dependências
  - Node.js
  - npm
+
+## Como Usar
+1. Baixe o script correspondente ao seu sistema operacional
+2. Salve o script no diretório onde irar criar seu projeto
+3. Execute o script
+  - Windows
+    ```
+    .\ts-setup-win.bat
+    ```
+  - Linux
+    ```
+    chmod +x ./ts-setup-linux.sh
+    ./ts-setup-linux.sh
+    ```
+  - Caso esteja usando uma interface gráfica, basta dar um clique duplo sobre arquivo. No Linux, pode ser necessário alterar as permissões do arquivo.
+4. (Opcional)Responda qual nome do seu projeto, caso não queira, basta clicar com _Enter_
+5. Caso necessário, personalize os arquivos para os requisitos do seu projeto
