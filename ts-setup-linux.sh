@@ -1,5 +1,20 @@
 #!/bin/sh
 
+# Verifica se o Node está instalado
+if ! command -v node &> /dev/null
+then
+  echo "Node não está instalado. Por favor, instale o Node antes de prosseguir."
+  exit
+fi
+
+# Verifica se o npm está instalado
+if ! command -v npm &> /dev/null
+then
+  echo "npm não está instalado. Por favor, instale o npm antes de prosseguir."
+  exit
+fi
+
+# Define uma variável para o diretório atual
 currentDirectory=$(pwd)
 
 # Pergunta nome do projeto
