@@ -1,6 +1,17 @@
 @echo off
 chcp 65001 > nul
 
+REM Verifica se Node.js e npm estão instalados
+node -v > nul 2>&1 || (
+  echo "Node.js não encontrado. Instale-o antes de prosseguir."
+  exit /b 1
+)
+npm -v > nul 2>&1 || (
+  echo "npm não encontrado. Instale-o antes de prosseguir."
+  exit /b 1
+)
+
+REM Define uma variavel para o diretorio atual
 set currentDirectory=%cd%
 
 REM Pergunta nome do projeto
