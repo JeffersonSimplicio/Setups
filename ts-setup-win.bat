@@ -1,6 +1,19 @@
 @echo off
 chcp 65001 > nul
 
+REM Verifica se o Node está instalado
+node -v >nul 2>&1 || (
+  echo Node não está instalado. Por favor, instale o Node antes de prosseguir.
+  exit /b
+)
+
+REM Verifica se o npm está instalado
+call npm -v >nul 2>&1 || (
+  echo npm não está instalado. Por favor, instale o npm antes de prosseguir.
+  exit /b
+)
+
+REM Define uma variavel para o diretorio atual
 set currentDirectory=%cd%
 
 REM Pergunta nome do projeto
